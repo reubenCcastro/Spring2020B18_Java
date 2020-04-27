@@ -36,5 +36,10 @@ public class List_Practice {
 
         int lastIndex = shoppingList.size() -1;
         System.out.println(lastIndex);
+
+
+
+
+
     }
 }
