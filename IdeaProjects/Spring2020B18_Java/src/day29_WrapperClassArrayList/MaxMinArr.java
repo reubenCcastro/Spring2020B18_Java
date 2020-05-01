@@ -16,14 +16,15 @@ public class MaxMinArr {
     //String[] arr = {"1","2.5", "3", "3.5", "4.5"};
     double[] arr = {1,2.5,3,3.5,4.5};
         double max = Double.MIN_VALUE;//1
-
-        for (double each :arr){ //5, each 1,2.5,3,3.5,4.5
-            if(each > max){
+        double min = Double.MAX_VALUE;
+        for (double each :arr) { //5, each 1,2.5,3,3.5,4.5
+            if (each > max) {
                 max = each;
 
             }
+            System.out.println(max);
+
         }
-        System.out.println(max);
 
 
         System.out.println("=====================================================");
