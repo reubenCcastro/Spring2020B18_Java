@@ -25,7 +25,7 @@ public class ReturnDuplicateValue {
 
 
         for(int i = 0; i < list.size();i++) {
-            //list.get(0)===> "A"
+            //list.get(0);//===> "A"
             int count = 0;
             for (String each : list) {
                 if (each.equals(list.get(i))) {
