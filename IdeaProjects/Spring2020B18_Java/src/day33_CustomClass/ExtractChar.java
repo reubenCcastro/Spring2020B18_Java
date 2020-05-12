@@ -18,13 +18,24 @@ public class ExtractChar {
         char[] arr = str.toCharArray();
         
 
-        ArrayList<Character> letterList = new ArrayList<>();
-        ArrayList<Character> digitList = new ArrayList<>();
-        ArrayList<Character> charList = new ArrayList<>();
+        ArrayList<Character> letterList = new ArrayList<>();// this list will contain all letters extracted from str
+        ArrayList<Character> digitList = new ArrayList<>(); // this list will contain all digits extracted from str
+        ArrayList<Character> charList = new ArrayList<>();// this list will contain all special characters extracted from str
+                    // from the string, if we call the toCharArray() method, what does it return us? it returns us a char array
+                     // ==> we can assign it to a char array
 
-        for(char each : arr){
+                    // we can use for each loop or regular for loop
+
+        for(char each : arr){// each : represents every element in this char array
+                    // during each iteration, if each is letter we add it to letters list
+                    // if each is digits ==> add it to digits list
+                    // if each is special character ==> add to specialChars list
+                    // either create condition depending on ascii table
+                    // or we use this Character.isLetter() method, or Character.isAlphabetic() method
+
             if(Character.isLetter(each)){
                 letterList.add(each);
+                    // to extract digits we can use this method: Character.isDigit()
             }else if(Character.isDigit(each)){
                 digitList.add(each);
             }else{

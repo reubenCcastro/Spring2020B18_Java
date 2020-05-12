@@ -4,7 +4,7 @@ public class FrequencyOfCharacters {
 
     public static void main(String[] args) {
 
-        String str = "AABBCC";
+        String str = "AAABBCDD";
         String NonDup = Library.RemoveDuplicates(str); // ABC
 
         String result= "";

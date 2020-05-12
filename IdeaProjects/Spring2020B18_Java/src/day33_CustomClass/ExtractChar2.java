@@ -13,15 +13,17 @@ public class ExtractChar2 {
         public static void main(String[] args) {
             String  str = "ABCD123$%#@&456EFG!";
 
-            ArrayList<Character> letters = new ArrayList<>();  // isLetter()
-            ArrayList<Character> digits = new ArrayList<>();
-            ArrayList<Character> specialChars = new ArrayList<>();
+            ArrayList<Character> letters = new ArrayList<>();  // this list will contain all letters extracted from str
+            ArrayList<Character> digits = new ArrayList<>(); // this list will contain all digits extracted from str
+            ArrayList<Character> specialChars = new ArrayList<>(); // this list will contain all special characters extracted from str
 
             for(int i= 0; i < str.length(); i++){
+                // how can I retrieve each character from string using i as index number
                 char each =  str.charAt(i);
 
                 if( Character.isLetter(each) ){
                     letters.add(each);
+                    // to extract digits we can use this method: Character.isDigit()
                 }else if(Character.isDigit(each)){
                     digits.add(each);
                 }else{

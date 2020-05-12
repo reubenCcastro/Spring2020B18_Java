@@ -4,28 +4,39 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-/*
-    1. write a program that can return the second maximum number from Arraylist
-            Ex: {1,2,3,4,5,6,7,8,8};
-                    output: 7
-    2. write a program that can return the second minimum number from Arraylist
-        Ex: {1,1,2,3,4,5,6,7,8,8};
-           output: 2
- */
+                            /*
+                            1. write a program that can return the second maximum number from Arraylist
+                            Ex: {1,2,3,4,5,6,7,8,8};
+                          output: 7
+                            2. write a program that can return the second minimum number from Arraylist
+                             Ex: {1,1,2,3,4,5,6,7,8,8};
+                              output: 2
+                    */
 public class Return2nd_MaxMin {
     public static void main(String[] args) {
-
+                    /*
+                     max(CollectionType)     : return the max object from collectiontype
+                        min(CollectionType)     : return the min object from collectiontype
+                    swap(CollectionType, index1, index2)    : swaps elements at the given indexes without adding or removing
+                        list: {1,2,3,4,5,6}
+                    Collections.swap(list, 1, 2); ==> list: {1,3,2,4,5,6}
+                    replaceAll(CollectionType, oldValue, newValue)   : replaces old value by new values
+                         list: {1,1,1,2,3,4,5}  // replace all 1 by 10
+                     Collections.replaceAll(list, 1, 10); ==> list {10,10,10,2,3,4,5}
+                        */
 
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 1, 2, 3, 4, 5, 6, 7, 8, 8));
+        System.out.println(numbers);      //  [1, 2, 3, 4, 5, 6, 7, 8, 8, 8]
         //second max:7
         //socond min:2
         Integer maxNum = Collections.max(numbers);
+        System.out.println(maxNum);//8
 
-        numbers.removeAll(Arrays.asList(maxNum));
+        numbers.removeAll(Arrays.asList(maxNum));// remove 8 and prints below
 
-        System.out.println(numbers);
+        System.out.println(numbers);// [1, 1, 2, 3, 4, 5, 6, 7]
         int secondMax = Collections.max(numbers);
-        System.out.println(secondMax);
+        System.out.println(secondMax);//7
 
 
         System.out.println("===============================================");

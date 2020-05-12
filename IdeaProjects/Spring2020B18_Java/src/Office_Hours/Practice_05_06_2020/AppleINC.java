@@ -15,6 +15,15 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+/*
+    create a class called Testers
+			Attributes:
+				name, employeeID, JobTitle, Salary
+			Actions:
+				setTesterInfo(), smokeTesting(),  creatingTicket();
+     */
+
+
 
 public class AppleINC {
 

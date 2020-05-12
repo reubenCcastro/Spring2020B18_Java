@@ -2,31 +2,38 @@ package day36_StaticBlock;
 import day34_CustomClass.Tester;
 public class StaticBlock2 {
 
-
     static int a;
     static int b;
     int c;
-    //if else needs to be initialized in block or in the method
-    /*
-    if(100 > 200){
+        // yesterday we created our Tester class.
+        // I want my tester to be used everywhere. Can I make it static? yes I can:
+         //if else needs to be initialized in block or in the method
+         /*
+        if(100 > 200){
         a = 100;
-    }else{
+        }else{
         b= 200;
-    }
-     */
+        }
+         */
 
    static Tester tester1 = new Tester();
 
+            // I will use it here in the main method like this:
     public static void main(String[] args) {
+            // tester1.setTesterInfo("Biggy", 12333,"SDET",123000);
 
-
-       System.out.println(tester1);
+       System.out.println(tester1);// it prints tester's info that were provided.
+            // after we ran the main method, these information were set.
+            // But can I call my static tester1 into another class? Yes I can by calling this class's name
+            // But the thing is the information above will not show when I call it because they were given after I ran main method here.
+            // we can try in class Test
+            // But if we initialize this tester1 outside this main method and in the static block and we call it into another class ==> it will show values
     }
 
     static{
         a =100;
         b= 200;
-        // c = 300; // static only accepts static
+            // c = 300; // static only accepts static
         if(100 > 200){
             a = 100;
         }else{

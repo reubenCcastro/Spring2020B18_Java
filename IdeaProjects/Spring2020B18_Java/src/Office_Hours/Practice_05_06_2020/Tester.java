@@ -1,4 +1,6 @@
+
 package Office_Hours.Practice_05_06_2020;
+
 
 public class Tester {
     /*
@@ -7,7 +9,9 @@ public class Tester {
 				name, employeeID, JobTitle, Salary
 			Actions:
 				setTesterInfo(), smokeTesting(),  creatingTicket();
+
      */
+
     String name;
     long employeeID;
     String jobTitle;
@@ -31,3 +35,4 @@ public class Tester {
                 +", employee id: "+employeeID+", salary: "+salary;
     }
 }
+

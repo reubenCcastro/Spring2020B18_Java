@@ -13,12 +13,8 @@ public class dogObject2 {
         String toy1 = "Ps4";
         String toy2 = "Piano";
 
-
-
         String subject1 = "Java";
         String subject2 = "Art";
-
-
 
         Dog dog1 = new Dog();
         dog1.setDogInfo("Alabay", "Extra big", 5, "Brown", "Ajdar");
@@ -42,13 +38,16 @@ public class dogObject2 {
         dog4.setDogInfo("Kangal","Huge",5,"White","Comar");
 
         System.out.println("===========================================================");
+                    // we create an array of the dogs. DataType = Dog
         Dog[] dogPark = {dog1, dog2, dog3, dog4};
-
+                    //if I want to print that each dog from list is eating chicken ==> loop and call eating() method
         for(int i = 0; i < dogPark.length; i++){
+                    // how do I retrieve each element from Array? using arrayName[indexNumber]
             dogPark[i].eating(food1);
         }
-
+                    // to print all dogs as drinking water:
         for(Dog each  : dogPark ){
+                    // from this object, I call the method drinking()
             each.drinking(drink1);
         }
 

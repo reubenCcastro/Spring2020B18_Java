@@ -20,10 +20,16 @@ public class Duplicates {
 
         ArrayList<Integer> list = new ArrayList<>();
         list.addAll(Arrays.asList(1,1,2,3,4,5,5));
+                // we need to remove only the unique ones ==> remove any element with frequency = 1
+                 // keep all duplicate elements ==> keep any element with frequency > 1
+
+                // we call removeIf() method
+                // create our predicate : with condition : if frequncy = 1 then remove
+                // in predicate ==> provide boolean expression
 
         list.removeIf(p -> Collections.frequency(list, p)==1);
         System.out.println(list);
-
+        // to have one element only of each duplicate, we can apply what we did in day32 duplicate task.
         System.out.println("====================================");
     }
 }

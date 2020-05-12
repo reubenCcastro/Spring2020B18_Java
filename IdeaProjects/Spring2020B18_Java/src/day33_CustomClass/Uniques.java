@@ -20,11 +20,15 @@ public class Uniques {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
-
         list.addAll( Arrays.asList(1,1,2,3,4,5,5) );
-
+            //  [2,3,4] are unique
+            // which method to use if we add the predicate? the removeIf() method
+            // this predicate will represent each element in this list
+            // p in lumbda expression represents each element
+            // under what condition do I need to remove this p? if frequency is greater than 1
+            // in the predicate, we have to provide a boolean expression ( in our case: frequency > 1)
         list.removeIf( p -> Collections.frequency(list, p) > 1 );  // if the frequnecy of object is greater than one, we remove them
-
+            // the expression above will remove each object (represented here by p) if its frequency is greater than 1
         System.out.println(list);
 
 
