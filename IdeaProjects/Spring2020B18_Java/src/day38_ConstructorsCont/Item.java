@@ -22,29 +22,37 @@ public class Item {
     String name;
     double unitPrice;
     int quantity;
-    //if there is extra information need to pass through the parameter
-    //the argument name is assign to this key word. by initlizing it with this.argument =argument
+    //Constructor: to initialize instance variables
+    // since we have 3 instance variables ==> we will pass 3 variables in the parameter
     public Item(String name, double unitPrice, int quantity ){
+        // because names of instance variables = names of variables in my arguments ==> use this. to refer to instance variables
         this.name = name;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
+        // now by doing this: once we create our objects using the Constructor: we will initialize the instance variables of each object
     }
-    public double calcCost(){// if the methods you are creating cant not be static because static only accepts static
-      //
-        return  quantity * unitPrice;
+    // instance method: to calculate cost
+    // We can not make this method static because we need to use our instance variables here
+    // we use Instance method to use Instance variables like this:
+    public double calcCost(){
+        return unitPrice*quantity;
+        // instance means every single object has its own copy
+        // each object will return different value from this method (it will return its own copy depending on its price and quantity)
     }
-    public String toString(){// when we are printing the object we have to specify on how we want to print this class
+    public String toString(){// instance method : toString() to specify how we want to print our item information
         return "Name: "+name+", Unit Price: "+unitPrice+", Quantity: "+quantity+" Total Price: $"+calcCost();
     }
 }
 //syntax of creating an object new key word and the existing constructor which is Item in this example
 class ShoppingList{
     public static void main(String[] args) {
+        // when creating objects we must pass our argument in the parameter because that's how we created our constructor
         Item item1 = new Item("soda", 1,6);
         Item item2 = new Item("milk", 3,1);
         Item item3 = new Item("eggs", 4,1);
         Item item4 = new Item("beef", 10,1);
         Item item5 = new Item("chicken",6,1);
+        // to try if our constructor works we can try printing one item like this:
         System.out.println(item1.calcCost());//6.0 this print makes sure
         System.out.println(item1);//Name: soda, Unit Price: 1.0, Quantity: 6 Total Price: $6.0
 

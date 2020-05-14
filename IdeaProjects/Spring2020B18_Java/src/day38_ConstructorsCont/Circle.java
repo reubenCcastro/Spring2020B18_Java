@@ -15,23 +15,26 @@ public class Circle {
             diameter of circle = 2 * radius
             area of circle = PI * r * r
             */
-    double radius;
-    static double pi = 3.14;
-    double diameter;
-
+    double radius;// instance variable
+    static double pi = 3.14;// static variable (one copy of this variable for ALL circles - our objects)
+    double diameter;// instance variable
+            // Here we will add a constructor that can initialize the radius of circle: we assign its value to our instance variable radius
     public Circle(double radius) {
 
         this.radius = radius;
-        diameter = radius * 2;
+        diameter = radius * 2;// no need for this. because it's the only variable with this name
+             // diameter must be instance because each circle will have its own diameter depending on radius (which is instance)
 
     }
+                // here I will create instance method to calculate area of circle like this:
+    public double Area() {// must be instance method because we are using an instance variable in here
+        return  pi * radius*radius; // even though we are using a static variable BUT we are also using an instance one ==> instance method
 
-    public double Area() {
-        return pi * (radius * radius);
     }
-
-    public double Perimeter() {
-        return pi * (2 * (radius * radius));
+                    // here I will create instance method to calculate perimeter of circle like this:
+    public double Perimeter() {// must be instance method because we are using an instance variable in here
+        return 2*radius*pi;  // even though we are using a static variable BUT we are also using an instance one ==> instance method
+        //  return diameter*pi; //(because diameter = 2*radius)
     }
 
     public String toString() {

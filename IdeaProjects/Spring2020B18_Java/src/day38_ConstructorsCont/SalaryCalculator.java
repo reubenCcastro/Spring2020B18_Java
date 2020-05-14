@@ -13,18 +13,23 @@ Task03:
                 toString(): returns the hourlyRate, weeklyHours and salary info as calculated by salary()
  */
 public class SalaryCalculator {
-
+    // These are our instance variables
     double hourlyRate;
     int weeklyHours;
     double stateTaxRate;
     double federalTaxRate;
-
+    // This is our Constructor that can initialize our instance variables like this:
+    // The name of our Constructor method MUST match our class name
+    // we provide the AccessModifier(here public) then name then we pass parameters if we need to (here we need 4 arguments)
     public SalaryCalculator(double hourlyRate,int weeklyHours, double stateTaxRate, double federalTaxRate){
+        // then we assign our instance variable to the values we are passing in argument
         this.hourlyRate = hourlyRate;
         this.weeklyHours = weeklyHours;
         this.stateTaxRate = stateTaxRate;
         this.federalTaxRate = federalTaxRate;
+        // This constructor method will run every time I create an object
     }
+
     public double salary(){
         return hourlyRate * weeklyHours * 48;
     }
@@ -37,7 +42,8 @@ public class SalaryCalculator {
     public double federalTax(){
         return federalTaxRate * salary();
 }
-    public String toString (){
+    // toString() method to specify how we want salary info printed:
+public String toString (){
         return " The hourly rate: "+hourlyRate+
                 "\n The weekly rate: "+weeklyHours+
                 "\n Gross Salary is:  "+salary()+
